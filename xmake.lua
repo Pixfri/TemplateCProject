@@ -14,8 +14,9 @@ add_rules("plugin.vsxmake.autoupdate")
 if is_mode("release") then
   set_fpmodels("fast")
   set_optimize("fastest")
-  set_symbols("debug", "hidden")
+  set_symbols("hidden")
 else
+  set_symbols("debug")
   add_defines("PN_DEBUG")
 end
 
