@@ -38,7 +38,8 @@ target("ProjectName")
   set_kind("binary")
   
   add_files("Source/**.c")
-  
+
+includes("xmake/**.lua")
   for _, ext in ipairs({".h", ".inl"}) do
     add_headerfiles("Include/**" .. ext)
   end
