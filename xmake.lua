@@ -39,9 +39,10 @@ target("ProjectName")
   
   add_files("Source/**.c")
 
-includes("xmake/**.lua")
   for _, ext in ipairs({".h", ".inl"}) do
     add_headerfiles("Include/**" .. ext)
   end
   
   add_rpathdirs("$ORIGIN")
+
+includes("xmake/**.lua")
